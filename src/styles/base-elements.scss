@@ -1,0 +1,51 @@
+// Base button
+
+.button {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 8px;
+  background: #b01736;
+  position: relative;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  &__text {
+    font-family: Proxima Nova Condensed;
+    color: #fff;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 18px 29px;
+  }
+  &:hover {
+    background-color: #d43152;
+    transition-duration: 0.1s;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px white;
+  }
+
+  &:active:after {
+    box-shadow: 0 0 0 0 white;
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: 0s;
+  }
+
+  &:active {
+    top: 1px;
+  }
+}

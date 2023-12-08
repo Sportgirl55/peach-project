@@ -1,18 +1,64 @@
 @import "variables.scss";
 @import "normalize.scss";
+@import "base-elements.scss";
 
 .container {
   max-width: 1250px;
   margin: auto;
 }
 
+// Header
+
 .header {
-  border: 1px solid blue;
+  display: flex;
+  gap: 297px;
+  width: 1250px;
+  height: 85px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  padding: 29px 69px;
+  &__logo {
+    width: 125px;
+    height: 25px;
+    flex-shrink: 0;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 20px;
+    height: 20px;
+    align-items: flex-end;
+  }
+
+  &__nav {
+    padding-top: 3px;
+  }
+
+  &__link {
+    color: $black-text;
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 
 .hero {
-  border: 1px solid green;
-  h1 {
+  background:
+    url("../images/bg.jpg"),
+    lightgray 50% / cover no-repeat;
+  width: 1250px;
+  height: 600px;
+  flex-shrink: 0;
+
+  &__content {
+    width: 709px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+    margin: 158px 70px;
+  }
+
+  &__title {
     font-size: 56px;
     font-style: normal;
     font-weight: 600;
@@ -141,7 +187,7 @@
       transition: 0.7s;
     }
   }
-  
+
   .active {
     color: $red-active;
   }
