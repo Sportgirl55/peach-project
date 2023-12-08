@@ -9,6 +9,8 @@
 $white: #fff;
 $black-text: #444444;
 $red-active: #a30c33;
+$red-text: #B01736;
+
 
 @mixin submenu-text {
   font-family: Proxima Nova;
@@ -16,10 +18,10 @@ $red-active: #a30c33;
   line-height: 20px;
 }
 
-// @mixin second-font {
-//   font-family: $second-font-family;
-//   font-size: 14px;
-// }
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
 
 // @mixin background-image {
 //   background-repeat: no-repeat;

@@ -38,6 +38,9 @@
     color: $black-text;
     font-size: 18px;
     line-height: 20px;
+    &:hover {
+      opacity: 0.9;
+    }
   }
 }
 
@@ -48,7 +51,6 @@
   width: 1250px;
   height: 600px;
   flex-shrink: 0;
-
   &__content {
     width: 709px;
     display: inline-flex;
@@ -67,24 +69,102 @@
 }
 
 .description {
-  border: 1px solid red;
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+  &__inner {
+    display: flex;
+    width: 1110px;
+    height: 352px;
+    padding: 100px 110px;
+    margin-top: 102px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: #fff;
+    box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.08);
+  }
+
   &__text {
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
+    text-align: center;
+    width: 890px;
+    &_red {
+      color: $red-text;
+    }
   }
-  &__text_red {
-    color: #b01736;
+
+  &__digits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 80px;
+    margin-top: 99px;
+    margin-bottom: 98px;
+    width: 890px;
+  }
+
+  .first-row {
+    display: flex;
+    gap: 185px;
+    width: 100%;
+  }
+  .second-row {
+    display: flex;
+    column-gap: 180px;
+    justify-content: center;
+    .description__item {
+      max-width: 213px;
+    }
+  }
+
+  &__item {
+    @include flex-column;
+    max-width: 243px;
+    gap: 4px;
+    &_padding {
+      padding-left: 2px;
+    }
+  }
+
+  &__digit {
+    display: flex;
+    gap: 10px;
+    color: $red-active;
+    font-size: 80px;
+    line-height: 80%;
+    opacity: 0.95;
+  }
+
+  &__sign {
+    color: $red-active;
+    font-size: 64px;
+    line-height: 100%;
+    opacity: 0.95;
+    &_bold {
+      font-weight: 900;
+    }
+  }
+  
+  &__explanation {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    &_long {
+      line-height: 120%;
+      padding-top: 1px;
+    }
   }
 }
 
 // Section map
 
 .offices {
-  display: flex;
-  flex-direction: column;
-  gap: 96px;
+  @include flex-column;
+  gap: 90px;
   position: relative;
   &__header {
     display: flex;
@@ -150,14 +230,12 @@
     width: 1113px;
     &__item {
       @include submenu-text;
-      display: flex;
-      flex-direction: column;
+      @include flex-column;
       gap: 12px;
       cursor: auto;
     }
     &__links {
-      display: flex;
-      flex-direction: column;
+      @include flex-column;
       gap: 12px;
     }
     &__link {
@@ -175,8 +253,7 @@
   }
 
   &__item {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     align-items: center;
     font-size: 18px;
     line-height: 20px;
