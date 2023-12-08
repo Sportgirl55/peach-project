@@ -1,0 +1,61 @@
+// $main-font-family: Montserrat, Arial, sans-serif;
+// $second-font-family: Mulish, Arial, sans-serif;
+// $black: #131313;
+// $second-black: #171717;
+// $white: #fff;
+// $beige: #c2ab81;
+// $grey: #808080;
+
+$white: #fff;
+$black-text: #444444;
+$red-active: #a30c33;
+
+@mixin submenu-text {
+  font-family: Proxima Nova;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+// @mixin second-font {
+//   font-family: $second-font-family;
+//   font-size: 14px;
+// }
+
+// @mixin background-image {
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+// }
+
+// @mixin visibility {
+//   opacity: 0.8;
+//   visibility: visible;
+//   z-index: 3;
+//   transition: all 0.7s ease-in-out;
+
+// }
+
+// @mixin visibility-hidden {
+//   opacity: 0;
+//   visibility: hidden;
+// }
+
+
+
+
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: flex;
+    opacity: 0;
+  }
+
+  100% {
+    display: flex;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,37 @@
+@import "variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+:root {
+  background-color: $white;
+  color: $black-text;
+  font-family: "Proxima Nova Condensed", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+
+  // font-family: $main-font-family;
+  // line-height: normal;
+}
+
+input,
+button,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
