@@ -11,12 +11,10 @@
 :root {
   background-color: $white;
   color: $black-text;
-  font-family: "Proxima Nova Condensed", sans-serif;
+  font-family: $font-family, sans-serif;
   font-style: normal;
   font-weight: 600;
-
-  // font-family: $main-font-family;
-  // line-height: normal;
+  line-height: 100%;
 }
 
 input,

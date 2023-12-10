@@ -1,32 +1,48 @@
+//Слайдер
+var swiper = new Swiper(".slider", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".slider__btn_left",
+    prevEl: ".slider__btn_right",
+  },
+  keyboard: true,
+});
+
+
 // Смена изображений карты
 const mapMenu = document.querySelector(".offices__menu");
+const dropdownBtn = document.querySelector(".offices__inner");
+const submenu = document.querySelector(".offices__dropdown-menu");
+const mapOfices = document.querySelector(".offices__map");
+const dropdownArrow = document.querySelector(".offices__dropdown-arrow");
+
+const offices = document.querySelector(".offices");
 
 mapMenu.addEventListener("click", (e) => {
   if (e.target.className !== "offices__item") return;
 
   document.querySelector(
     ".offices__image"
-  ).src = `./src/images/${e.target.id}.png`;
+  ).src = `./src/images/maps/${e.target.id}.png`;
   mapMenu
     .querySelectorAll("li")
     .forEach((item) => item.classList.remove("active"));
   e.target.classList.add("active");
 });
 
-const dropdownBtn = document.querySelector(".offices__inner");
-const submenu = document.querySelector(".offices__dropdown-menu");
-const menu = document.querySelector(".offices__menu");
-const mapOfices = document.querySelector(".offices__map");
-const dropdownArrow = document.querySelector(".offices__dropdown-arrow");
-
-const offices = document.querySelector(".offices");
 
 dropdownBtn.addEventListener("mouseenter", (e) => {
   if (submenu.classList.contains("show")) return;
 
-  menu.style.opacity = 0.3;
+  mapMenu.style.opacity = 0.3;
   mapOfices.style.opacity = 0.3;
-  menu.querySelectorAll(".offices__item").forEach((item) => {
+  mapMenu.querySelectorAll(".offices__item").forEach((item) => {
     item.style.pointerEvents = "none";
   });
 
@@ -36,12 +52,12 @@ dropdownBtn.addEventListener("mouseenter", (e) => {
 
 [submenu, mapOfices].forEach((item) => {
   item.addEventListener("click", (e) => {
-    menu.style.opacity = 1;
+    mapMenu.style.opacity = 1;
     mapOfices.style.opacity = 1;
 
-    submenu.classList.toggle("show");
+    submenu.classList.remove("show");
     dropdownArrow.style.transform = "rotateX(360deg)";
-    menu.querySelectorAll(".offices__item").forEach((item) => {
+    mapMenu.querySelectorAll(".offices__item").forEach((item) => {
       item.style.pointerEvents = "auto";
     });
   });
