@@ -88,7 +88,7 @@
             </div>
             <div class="offices__dropdown-menu">
               <ul class="submenu">
-                <li class="submenu__item">
+                <li class="submenu__item" data-area="moscow">
                   <div class="submenu__item-name">
                     <span>Москва</span>
                     <svg class="submenu__arrow" xmlns="http://www.w3.org/2000/svg" width="8" height="4"
@@ -97,7 +97,7 @@
                     </svg>
                   </div>
                 </li>
-                <li class="submenu__item">
+                <li class="submenu__item" data-area="center">
                   <div class="submenu__item-name">
                     <span>Центр</span>
                     <svg class="submenu__arrow" xmlns="http://www.w3.org/2000/svg" width="8" height="4"
@@ -105,13 +105,13 @@
                       <path d="M4 4L7.4641 0.25H0.535898L4 4Z" fill="#444444" />
                     </svg>
                   </div>
-                  <ul class="submenu__links">
+                  <ul class="submenu__links" data-parent-area="center">
                     <li><a class="submenu__link" href="#">Воронеж</a></li>
                     <li><a class="submenu__link" href="#">Ярославль</a></li>
                     <li><a class="submenu__link" href="#">Белгород</a></li>
                   </ul>
                 </li>
-                <li class="submenu__item">
+                <li class="submenu__item" data-area="north-west">
                   <div class="submenu__item-name">
                     <span>Северо-Запад</span>
                     <svg class="submenu__arrow" xmlns="http://www.w3.org/2000/svg" width="8" height="4"
@@ -120,12 +120,12 @@
                       <path d="M4 4L7.4641 0.25H0.535898L4 4Z" fill="#444444" />
                     </svg>
                   </div>
-                  <ul class="submenu__links">
+                  <ul class="submenu__links" data-parent-area="north-west">
                     <li><a class="submenu__link" href="#">Санкт-Петербург</a></li>
                     <li><a class="submenu__link" href="#">Калининградд</a></li>
                   </ul>
                 </li>
-                <li class="submenu__item">
+                <li class="submenu__item" data-area="south">
                   <div class="submenu__item-name">
                     <span>Юг</span>
                     <svg class="submenu__arrow" xmlns="http://www.w3.org/2000/svg" width="8" height="4"
@@ -134,13 +134,13 @@
                       <path d="M4 4L7.4641 0.25H0.535898L4 4Z" fill="#444444" />
                     </svg>
                   </div>
-                  <ul class="submenu__links">
+                  <ul class="submenu__links" data-parent-area="south">
                     <li><a class="submenu__link" href="#">Ростов-на-Дону</a></li>
                     <li><a class="submenu__link" href="#">Краснодар</a></li>
                     <li><a class="submenu__link" href="#">Волгоград</a></li>
                   </ul>
                 </li>
-                <li class="submenu__item">
+                <li class="submenu__item" data-area="volga">
                   <div class="submenu__item-name">
                     <span>Волга</span>
                     <svg class="submenu__arrow" xmlns="http://www.w3.org/2000/svg" width="8" height="4"
@@ -149,7 +149,7 @@
                       <path d="M4 4L7.4641 0.25H0.535898L4 4Z" fill="#444444" />
                     </svg>
                   </div>
-                  <ul class="submenu__links">
+                  <ul class="submenu__links" data-parent-area="volga">
                     <li><a class="submenu__link" href="#">Казань</a></li>
                     <li><a class="submenu__link" href="#">Самара</a></li>
                     <li><a class="submenu__link" href="#">Уфа</a></li>
@@ -157,7 +157,7 @@
                     <li><a class="submenu__link" href="#">Нижний Новгород</a></li>
                   </ul>
                 </li>
-                <li class="submenu__item">
+                <li class="submenu__item" data-area="ural">
                   <div class="submenu__item-name">
                     <span>Урал</span>
                     <svg class="submenu__arrow" xmlns="http://www.w3.org/2000/svg" width="8" height="4"
@@ -166,7 +166,7 @@
                       <path d="M4 4L7.4641 0.25H0.535898L4 4Z" fill="#444444" />
                     </svg>
                   </div>
-                  <ul class="submenu__links">
+                  <ul class="submenu__links" data-parent-area="ural">
                     <li><a class="submenu__link" href="#">Екатеринбург</a></li>
                     <li><a class="submenu__link" href="#">Челябинск</a></li>
                     <li><a class="submenu__link" href="#">Пермь</a></li>
@@ -175,7 +175,7 @@
                     <li><a class="submenu__link" href="#">Ижевск</a></li>
                   </ul>
                 </li>
-                <li class="submenu__item">
+                <li class="submenu__item" data-area="sibir">
                   <div class="submenu__item-name">
                     <span>Сибирь</span>
                     <svg class="submenu__arrow" xmlns="http://www.w3.org/2000/svg" width="8" height="4"
@@ -184,7 +184,7 @@
                       <path d="M4 4L7.4641 0.25H0.535898L4 4Z" fill="#444444" />
                     </svg>
                   </div>
-                  <ul class="submenu__links">
+                  <ul class="submenu__links" data-parent-area="sibir">
                     <li><a class="submenu__link" href="#">Новосибирск</a></li>
                     <li><a class="submenu__link" href="#">Омск</a></li>
                     <li><a class="submenu__link" href="#">Томск</a></li>
@@ -192,7 +192,7 @@
                     <li><a class="submenu__link" href="#">Иркутск</a></li>
                   </ul>
                 </li>
-                <li class="submenu__item">
+                <li class="submenu__item" data-area="far-east">
                   <div class="submenu__item-name">
                     <span>Дальний Восток</span>
                     <svg class="submenu__arrow" xmlns="http://www.w3.org/2000/svg" width="8" height="4"
@@ -201,7 +201,7 @@
                       <path d="M4 4L7.4641 0.25H0.535898L4 4Z" fill="#444444" />
                     </svg>
                   </div>
-                  <ul class="submenu__links">
+                  <ul class="submenu__links" data-parent-area="far-east">
                     <li><a class="submenu__link" href="#">Хабаровск</a></li>
                     <li><a class="submenu__link" href="#">Владивосток</a></li>
                   </ul>
@@ -210,19 +210,19 @@
             </div>
           </div>
           <ul class="offices__menu">
-            <li class="offices__item active" id="map-all">Все</li>
-            <li class="offices__item" id="map-moscow">Москва</li>
-            <li class="offices__item" id="map-center">Центр</li>
-            <li class="offices__item" id="map-north-west">Северо-Запад</li>
-            <li class="offices__item" id="map-south">Юг</li>
-            <li class="offices__item" id="map-volga">Волга</li>
-            <li class="offices__item" id="map-ural">Урал</li>
-            <li class="offices__item" id="map-sibir">Сибирь</li>
-            <li class="offices__item" id="map-far-east">Дальний восток</li>
+            <li class="offices__item active" data-office-id="map-all">Все</li>
+            <li class="offices__item" data-office-id="map-moscow">Москва</li>
+            <li class="offices__item" data-office-id="map-center">Центр</li>
+            <li class="offices__item" data-office-id="map-north-west">Северо-Запад</li>
+            <li class="offices__item" data-office-id="map-south">Юг</li>
+            <li class="offices__item" data-office-id="map-volga">Волга</li>
+            <li class="offices__item" data-office-id="map-ural">Урал</li>
+            <li class="offices__item" data-office-id="map-sibir">Сибирь</li>
+            <li class="offices__item" data-office-id="map-far-east">Дальний восток</li>
           </ul>
         </nav>
         <div class="offices__map">
-          <img class="offices__image" src="./src/images/maps/map-all.png" alt="Map with offices location">
+          <img class="offices__image" src="/images/maps/map-all.png" alt="Map with offices location">
         </div>
       </div>
 
